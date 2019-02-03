@@ -42,7 +42,15 @@ class App extends Component {
         <div>
           {/* todoList Arrayの要素分のコンポーネントを展開 */}
           {this.state.todoList.map(todo => (
-            <ToDoListItem key={todo.title} title={todo.title} description={todo.description} />
+            <ToDoListItem key={todo.title} 
+             title={todo.title} 
+             description={todo.description} 
+             onClick={() => {
+               this.setState({
+                 todoList: this.state.todoList.filter(x => x !== todo)
+               })
+             }}
+             />
           ))}
         </div>
       </div>
