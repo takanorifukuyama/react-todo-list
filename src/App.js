@@ -6,6 +6,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <form className="App-form">
+          <div>
+            <input id="title" placeholder="title"/>
+            <textarea id="description" placeholder="description"/>
+          </div>
+          <div>
+            <button type="submit">登録</button>
+          </div>
+        </form>
         <div>
           <ToDoListItem
            title="Create Homepage!"
